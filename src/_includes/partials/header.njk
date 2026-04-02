@@ -1,0 +1,24 @@
+<header class="site-header" role="banner">
+  <div class="site-header__inner container">
+    <a class="site-logo" href="/" aria-label="{{ site.name }} — Home">
+      <span class="site-logo__frame">
+        <img src="/assets/logo.png" alt="" width="1009" height="462" class="site-logo__img">
+      </span>
+    </a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary" data-nav>
+      <ul class="site-nav__list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about-us/">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <a class="btn btn--header-cta" href="tel:{{ site.phoneTel }}">Call {{ site.phoneDisplay }}</a>
+    </nav>
+  </div>
+</header>

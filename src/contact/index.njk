@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+title: Contact
+description: Contact Resolute Plumbing Co. for plumbing service in Greater Houston. Call or send a message for scheduling.
+---
+<div class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="/">Home</a> / Contact</p>
+    <h1>Contact us</h1>
+    <p>Request an appointment or ask a question—we’ll respond as soon as possible.</p>
+  </div>
+</div>
+<div class="container contact-grid">
+  <div class="contact-card">
+    <h2>Call or email</h2>
+    <p><strong>Phone:</strong> <a href="tel:{{ site.phoneTel }}">{{ site.phoneDisplay }}</a></p>
+    <p><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <p><strong>Service area:</strong> {{ site.serviceArea }}</p>
+    <p>For urgent leaks or sewer backups, please call—email is not monitored 24/7.</p>
+  </div>
+  <div class="contact-card">
+    <h2>Send a message</h2>
+    <form class="contact-form" action="#" method="post" onsubmit="return false;">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="form-row">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="form-row">
+        <label for="service">Service needed</label>
+        <select id="service" name="service">
+          <option value="">Select…</option>
+          <option>General repair</option>
+          <option>Water heater</option>
+          <option>Drain / sewer</option>
+          <option>Gas line</option>
+          <option>Installation / remodel</option>
+          <option>Emergency</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Describe the issue and your Houston-area address (city/zip)."></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary">Submit request</button>
+      <p style="font-size:0.85rem;margin-top:0.75rem;opacity:0.85;">This demo form does not transmit data. Connect your endpoint or a form service to go live.</p>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+title: Houston Plumber
+description: Resolute Plumbing Co. provides licensed plumbing repair, installation, and drain service throughout Greater Houston, TX. Call for same-day service.
+---
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero__media" aria-hidden="true">
+    <img
+      class="hero__photo"
+      src="/assets/resolute-plumbing-banner-image.jpg"
+      alt=""
+      width="1024"
+      height="580"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async">
+  </div>
+  <div class="hero__overlay" aria-hidden="true"></div>
+  <div class="container hero__content">
+    <span class="hero__badge">Greater Houston, TX</span>
+    <h1 id="hero-heading">Plumbing you can count on—day or night</h1>
+    <p class="hero__lead">From leak detection and water heaters to repiping and gas lines, {{ site.name }} delivers steady, honest work across the Houston metro.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="tel:{{ site.phoneTel }}">Schedule Service</a>
+      <a class="btn btn--secondary" href="/services/">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Built for Houston homes &amp; businesses</h2>
+    <p class="section__intro">Houston’s heat, soil movement, and older neighborhoods put serious stress on pipes and fixtures. Our crew brings the right tools and Texas-tough workmanship to every job—whether you are in the Loop, Katy, or the Gulf corridor.</p>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Emergency repairs</h3>
+        <p>Stopped drains, burst lines, and failed water heaters don’t wait. We prioritize fast response across our service area.</p>
+        <a href="/contact/">Request help →</a>
+      </article>
+      <article class="card">
+        <h3>Water heaters</h3>
+        <p>Tank and tankless installation, repairs, and flush service so you always have reliable hot water.</p>
+        <a href="/services/water-heaters/">Water heater services →</a>
+      </article>
+      <article class="card">
+        <h3>Whole-home repiping</h3>
+        <p>Galvanized or polybutylene issues? We plan full repipes with minimal disruption to your household.</p>
+        <a href="/services/general-plumbing/whole-home-repiping/">Repiping →</a>
+      </article>
+      <article class="card">
+        <h3>Drain &amp; sewer</h3>
+        <p>Camera inspections, hydro jetting, and line repairs to keep wastewater flowing away from your foundation.</p>
+        <a href="/services/drain-sewer/">Drain &amp; sewer →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section__title">{{ site.tagline }}</h2>
+    <p class="section__intro">We show up in marked vehicles, explain options in plain language, and stand behind our work. That’s how {{ site.name }} earns repeat business from families and property managers throughout Southeast Texas.</p>
+    <p><a class="btn btn--primary" href="tel:{{ site.phoneTel }}">Call {{ site.phoneDisplay }}</a></p>
+  </div>
+</section>

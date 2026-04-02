@@ -1,0 +1,41 @@
+<footer class="site-footer">
+  <div class="site-footer__waves" aria-hidden="true"></div>
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <img src="/assets/logo.png" alt="" width="1009" height="462" class="site-footer__logo" loading="lazy">
+      <p class="site-footer__tagline">{{ site.tagline }}</p>
+      <p class="site-footer__area">{{ site.serviceArea }}</p>
+    </div>
+    <div>
+      <h2 class="site-footer__heading">Services</h2>
+      <ul class="site-footer__links">
+        <li><a href="/services/general-plumbing/">General Plumbing</a></li>
+        <li><a href="/services/installation/">Installation</a></li>
+        <li><a href="/services/water-heaters/">Water Heaters</a></li>
+        <li><a href="/services/gas-lines/">Gas Lines</a></li>
+        <li><a href="/services/drain-sewer/">Drain &amp; Sewer</a></li>
+        <li><a href="/services/inspections/">Inspections</a></li>
+        <li><a href="/services/water-treatment/">Water Treatment</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="site-footer__heading">Company</h2>
+      <ul class="site-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/about-us/privacy-policy/">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="site-footer__heading">Contact</h2>
+      <p><a class="site-footer__phone" href="tel:{{ site.phoneTel }}">{{ site.phoneDisplay }}</a></p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p class="site-footer__address">{{ site.addressLine }}<br>{{ site.city }}, {{ site.state }}</p>
+    </div>
+  </div>
+  <div class="site-footer__bottom container">
+    <p>&copy; {{ currentYear }} {{ site.name }}. All rights reserved. Licensed &amp; insured plumbing throughout Greater Houston.</p>
+  </div>
+</footer>
