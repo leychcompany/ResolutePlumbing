@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Houston Plumber
-description: Resolute Plumbing Co. provides licensed plumbing repair, installation, and drain service throughout Greater Houston, TX. Call for same-day service.
+description: Resolute Plumbing provides licensed plumbing repair, installation, and drain service throughout Greater Houston, TX. Call for same-day service.
 ---
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero__media" aria-hidden="true">
@@ -18,7 +18,7 @@ description: Resolute Plumbing Co. provides licensed plumbing repair, installati
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="container hero__content">
     <span class="hero__badge">Greater Houston, TX</span>
-    <h1 id="hero-heading">Plumbing you can count on—day or night</h1>
+    <h1 id="hero-heading">Plumbing you can count on, day or night</h1>
     <p class="hero__lead">From leak detection and water heaters to repiping and gas lines, {{ site.name }} delivers steady, honest work across the Houston metro.</p>
     <div class="hero__actions">
       <a class="btn btn--primary" href="tel:{{ site.phoneTel }}">Schedule Service</a>
@@ -27,15 +27,28 @@ description: Resolute Plumbing Co. provides licensed plumbing repair, installati
   </div>
 </section>
 
+<section class="home-emergency" aria-labelledby="emergency-heading">
+  <div class="container home-emergency__inner">
+    <div class="home-emergency__copy">
+      <p class="home-emergency__eyebrow">Emergency service</p>
+      <h2 id="emergency-heading" class="home-emergency__title">Need help right now?</h2>
+      <p class="home-emergency__lead">Active leaks, sewer backups, no hot water, and major stoppages get priority routing across Greater Houston.</p>
+    </div>
+    <div class="home-emergency__actions">
+      <a class="btn btn--primary home-emergency__cta" href="tel:{{ site.phoneTel }}">Call {{ site.phoneDisplay }}</a>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <h2 class="section__title">Built for Houston homes &amp; businesses</h2>
-    <p class="section__intro">Houston’s heat, soil movement, and older neighborhoods put serious stress on pipes and fixtures. Our crew brings the right tools and Texas-tough workmanship to every job—whether you are in the Loop, Katy, or the Gulf corridor.</p>
+    <p class="section__intro">Houston’s heat, soil movement, and older neighborhoods put serious stress on pipes and fixtures. Our crew brings the right tools and Texas-tough workmanship to every job, whether you are in the Loop, Katy, or the Gulf corridor.</p>
     <div class="card-grid">
       <article class="card">
-        <h3>Emergency repairs</h3>
-        <p>Stopped drains, burst lines, and failed water heaters don’t wait. We prioritize fast response across our service area.</p>
-        <a href="/contact/">Request help →</a>
+        <h3>General plumbing</h3>
+        <p>Leaks, fixtures, kitchens, baths, and the repairs that keep your home running smoothly.</p>
+        <a href="/services/general-plumbing/">General plumbing →</a>
       </article>
       <article class="card">
         <h3>Water heaters</h3>
@@ -51,6 +64,26 @@ description: Resolute Plumbing Co. provides licensed plumbing repair, installati
         <h3>Drain &amp; sewer</h3>
         <p>Camera inspections, hydro jetting, and line repairs to keep wastewater flowing away from your foundation.</p>
         <a href="/services/drain-sewer/">Drain &amp; sewer →</a>
+      </article>
+      <article class="card">
+        <h3>Installation</h3>
+        <p>Fixtures, appliances, and trim-out for remodels and new layouts, installed to code.</p>
+        <a href="/services/installation/">Installation →</a>
+      </article>
+      <article class="card">
+        <h3>Gas lines</h3>
+        <p>Safe gas piping for ranges, dryers, outdoor kitchens, and new equipment.</p>
+        <a href="/services/gas-lines/">Gas line services →</a>
+      </article>
+      <article class="card">
+        <h3>Inspections</h3>
+        <p>Pre-purchase and diagnostic checks with clear findings so you know what you are buying or maintaining.</p>
+        <a href="/services/inspections/">Inspections →</a>
+      </article>
+      <article class="card">
+        <h3>Water treatment</h3>
+        <p>Filtration and softening tuned to Houston-area water so fixtures and appliances last longer.</p>
+        <a href="/services/water-treatment/">Water treatment →</a>
       </article>
     </div>
   </div>
