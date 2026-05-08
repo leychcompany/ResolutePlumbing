@@ -919,9 +919,20 @@ a:hover {
   color: var(--color-accent);
 }
 
-.site-footer__bottom {
+.site-footer__license {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 1rem 0 1.5rem;
+  padding: 0.85rem 0 0;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.site-footer__license p {
+  margin: 0;
+}
+
+.site-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 0 1.5rem;
   font-size: 0.8rem;
   opacity: 0.85;
 }
