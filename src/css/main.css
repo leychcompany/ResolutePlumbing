@@ -275,7 +275,9 @@ a:hover {
 }
 
 .btn--primary:hover,
-.btn--primary:focus-visible {
+.btn--primary:focus-visible,
+a.btn--primary:hover,
+a.btn--primary:focus-visible {
   background: var(--color-water);
   color: #ffffff;
 }
@@ -302,7 +304,9 @@ a:hover {
 }
 
 .btn--header-cta:hover,
-.btn--header-cta:focus-visible {
+.btn--header-cta:focus-visible,
+a.btn--header-cta:hover,
+a.btn--header-cta:focus-visible {
   background: var(--color-water);
   color: #ffffff;
 }
@@ -1009,6 +1013,6 @@ a:hover {
   font-weight: 600;
 }
 
-.service-hub aside a:hover {
+.service-hub aside a:not(.btn):hover {
   color: var(--color-water);
 }
