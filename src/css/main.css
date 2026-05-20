@@ -822,6 +822,22 @@ a.btn--header-cta:focus-visible {
   resize: vertical;
 }
 
+.contact-form__status {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  min-height: 1.4em;
+}
+
+.contact-form__status--success {
+  color: #1a7a3f;
+  font-weight: 600;
+}
+
+.contact-form__status--error {
+  color: #b81c1c;
+  font-weight: 600;
+}
+
 /* Footer */
 .site-footer {
   position: relative;

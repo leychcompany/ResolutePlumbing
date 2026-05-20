@@ -1,0 +1,6 @@
+{
+  "buildCommand": "yarn build",
+  "devCommand": "yarn dev:static --port $PORT",
+  "outputDirectory": "_site",
+  "installCommand": "yarn install"
+}

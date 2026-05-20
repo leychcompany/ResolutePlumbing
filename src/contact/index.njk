@@ -7,7 +7,7 @@ description: Contact Resolute Plumbing for plumbing service in Greater Houston. 
   <div class="container">
     <p class="breadcrumb"><a href="/">Home</a> / Contact</p>
     <h1>Contact us</h1>
-    <p>Request an appointment or ask a question, and we’ll respond as soon as possible.</p>
+    <p>Request an appointment or ask a question, and we'll respond as soon as possible.</p>
   </div>
 </div>
 <div class="container contact-grid">
@@ -20,7 +20,7 @@ description: Contact Resolute Plumbing for plumbing service in Greater Houston. 
   </div>
   <div class="contact-card">
     <h2>Send a message</h2>
-    <form class="contact-form" action="#" method="post" onsubmit="return false;">
+    <form class="contact-form" id="contact-form" action="/api/contact" method="post">
       <div class="form-row">
         <label for="name">Name</label>
         <input id="name" name="name" type="text" autocomplete="name" required>
@@ -49,8 +49,65 @@ description: Contact Resolute Plumbing for plumbing service in Greater Houston. 
         <label for="message">Message</label>
         <textarea id="message" name="message" required placeholder="Describe the issue and your Houston-area address (city/zip)."></textarea>
       </div>
-      <button type="submit" class="btn btn--primary">Submit request</button>
-      <p style="font-size:0.85rem;margin-top:0.75rem;opacity:0.85;">This demo form does not transmit data. Connect your endpoint or a form service to go live.</p>
+      <button type="submit" class="btn btn--primary" id="contact-submit">Submit request</button>
+      <p class="contact-form__status" id="contact-status" aria-live="polite"></p>
     </form>
   </div>
 </div>
+
+<script>
+(function () {
+  var form = document.getElementById("contact-form");
+  var btn = document.getElementById("contact-submit");
+  var status = document.getElementById("contact-status");
+
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    status.textContent = "";
+    status.className = "contact-form__status";
+
+    var data = {
+      name: form.name.value,
+      phone: form.phone.value,
+      email: form.email.value,
+      service: form.service.value,
+      message: form.message.value,
+    };
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then(function (res) {
+        var contentType = res.headers.get("content-type") || "";
+        if (!contentType.includes("application/json")) {
+          throw new Error("Server error. Please call us directly at (713) 887-3540.");
+        }
+        return res.json().then(function (json) {
+          if (!res.ok) throw new Error(json.error || "Server error.");
+          return json;
+        });
+      })
+      .then(function (json) {
+        if (json.success) {
+          status.textContent = "Message sent! We\u2019ll be in touch shortly.";
+          status.classList.add("contact-form__status--success");
+          form.reset();
+        }
+      })
+      .catch(function (err) {
+        status.textContent = err.message || "Something went wrong. Please call us directly.";
+        status.classList.add("contact-form__status--error");
+      })
+      .finally(function () {
+        btn.disabled = false;
+        btn.textContent = "Submit request";
+      });
+  });
+})();
+</script>
