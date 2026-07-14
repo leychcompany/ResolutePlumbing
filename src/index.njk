@@ -2,18 +2,29 @@
 layout: layouts/base.njk
 title: Houston Plumber
 description: Resolute Plumbing provides licensed plumbing repair, installation, and drain service throughout Greater Houston, TX. Call for same-day service.
+lcpImage: /assets/resolute-plumbing-banner-image-640.avif
 ---
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero__media" aria-hidden="true">
-    <img
-      class="hero__photo"
-      src="/assets/resolute-plumbing-banner-image.jpg"
-      alt=""
-      width="1024"
-      height="580"
-      loading="eager"
-      fetchpriority="high"
-      decoding="async">
+    <picture>
+      <source
+        type="image/avif"
+        srcset="/assets/resolute-plumbing-banner-image-640.avif 640w, /assets/resolute-plumbing-banner-image-800.avif 800w, /assets/resolute-plumbing-banner-image-1200.avif 1200w"
+        sizes="100vw">
+      <source
+        type="image/webp"
+        srcset="/assets/resolute-plumbing-banner-image-640.webp 640w, /assets/resolute-plumbing-banner-image-800.webp 800w, /assets/resolute-plumbing-banner-image-1200.webp 1200w"
+        sizes="100vw">
+      <img
+        class="hero__photo"
+        src="/assets/resolute-plumbing-banner-image.jpg"
+        alt=""
+        width="1200"
+        height="680"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async">
+    </picture>
   </div>
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="container hero__content">

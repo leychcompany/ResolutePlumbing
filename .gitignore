@@ -5,3 +5,6 @@ _site/
 .env.local
 .env*.local
 .vercel
+src/fonts/
+src/assets/*.webp
+src/assets/*.avif

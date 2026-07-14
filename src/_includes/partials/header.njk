@@ -2,7 +2,10 @@
   <div class="site-header__inner container">
     <a class="site-logo" href="/" aria-label="{{ site.name }}, home">
       <span class="site-logo__frame">
-        <img src="/assets/logo.png" alt="" width="1009" height="462" class="site-logo__img">
+        <picture>
+          <source type="image/webp" srcset="/assets/logo.webp">
+          <img src="/assets/logo.png" alt="" width="400" height="183" class="site-logo__img" decoding="async">
+        </picture>
       </span>
     </a>
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">
